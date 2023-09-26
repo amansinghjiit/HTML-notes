@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Favicon--> <link rel="shortcut icon" type="image/x-icon" href="https://source.unsplash.com/50x50/?logo">
+        <meta name ="keywords" content="for,s,tables,button">
+        <meta name ="description" content="this is notes to learn html forms and table">
+        <meta name ="author" content="Aman">
+        <title>Forms</title>
+    </head>
+    <body>
+
+        <!-- 
+        Note - <form action="url" method ="post/get"> enter url where you want to submit data and also method get to send data in url, not safe for password>
+        1.we give attribute because we use id to label it
+        2. required attribute is to make any option compulsory
+        3. name attribute to required to collect the data during form submission eg - if name is username then data will be saved like username = aman
+        4. placeholder attribute is to display sample text
+        5. value attribute is to set default value to any forum
+        6. disabled attribut is make that nobody can edit that form
+        -->
+
+        <form>
+            <div>
+                <label for username>Username</label>
+                <input type ="text" id="username" name="username" placeholder="Aman">
+            </div>
+
+            <div>
+                <label for class>Class</label>
+                <input type ="number" id ="class" name="class" value="10" disabled="10" required> 
+            </div>
+
+            <div>
+                <label for password>Password</label>
+                <input type ="password" id ="password" name="password" placeholder="****" required>
+            </div>
+
+            <div>
+                <label for time>Time</label>
+                <input type ="time" name="time" id ="time">
+            </div>
+
+            <div>
+                <label for email>Email</label>
+                <input type ="email" id ="email" name ="email" placeholder="aman@gmail.com">
+            </div>
+
+            <div>
+                <label for range>Range</label>
+                <input type ="range" id ="range" name = "range" min="20" max="50" step="10">
+            </div>
+            <hr>
+
+            <!--==============Radio Buttons==============-->
+            <!-- Checked is to set by default,value is to set value which we get on pressing submit -->
+            <p>Gender</p>
+            <input type="radio" name="gender" value = "Male" checked>Male<br>
+            <input type="radio" name = "gender" value = "Female">Female<br>
+            <input type="radio" name = "gender" value = "Other">Other<br>
+
+            <!--==============Checkboxes==============-->
+            <p>Courses done</p>
+            <input type ="checkbox" name ="course" value="C++">C++
+            <input type ="checkbox" name ="course" value="Java">Java
+            <input type ="checkbox" name ="course" value="Python">Python
+
+            <!--==============Dropdown List==============-->
+            <!-- To select multiple option use multiple attribute in <select> -->
+            <p>Month</p>
+            <select name = "month">
+                <option>Jan</option>
+                <option selected>Feb</option>
+                <option>Mar</option>
+                <option>April</option>
+            </select>
+
+            <!--==============Textarea==============-->
+            <p>share experience</p>
+            <textarea name = "experience" rows ="10" cols="30"></textarea><br>
+            <hr>
+            
+            <!--==============Buttons==============-->
+            <!-- We can image with <button></button> tag but not with input type = "button" -->
+                <input type= "submit"><br>
+                <input type= "button" value = "Button1"><br>
+                <button type="button">Button2</button>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+                <button type="menu">Menu</button>
+                <button type="submit"><img src = "https://source.unsplash.com/50x50/?logo"></button>
+        </form>
+        <hr>
+
+        <!--==============Tables==============-->
+<table border="1">
+    <caption>Table 1</caption>
+    <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<table border="1">
+    <caption>Normal table</caption>
+    <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+    </tr>
+</table><br>
+
+<table border="1">
+    <caption>Table with rowspan</caption>
+    <tr>
+        <td rowspan="2">Row 1 and 2, Cell 1 (Vertical Span)</td>
+        <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Cell 2</td>
+    </tr>
+</table><br>
+
+<table border="1">
+    <caption>Table with colspan</caption>
+    <tr>
+        <td colspan="2">Row 1, Cell 1,2 (Horizontal Span)</td>
+    </tr>
+    <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+    </tr>
+</table><br>
+<hr>
+
+<ul type="square"> <!--type=circle,disc,cirle-->
+    <li>Hello</li>
+    <li>How</li>
+    <li>Are</li>
+    <li>you</li>
+</ul>
+
+<ol type =  "I" start="10"> <!--type=A,a,i,I,-->
+    <li>Hello</li>
+    <li>How</li>
+    <li>Are</li>
+    <li>you</li>
+</ol>
+<hr>
+<a href="https://google.com">Same tab open</a>
+<a href="https://google.com" target="_blank">Next tab open</a>
+<p>Clickable image <a href="https://google.com"><img src = "https://source.unsplash.com/50x10/?logo"></a></p>
+<a href="mailto:amannick2@gmail.com">Send email</a>
+<p>Read comments for more information</p>
+<!--
+    Useful info
+    1. <img src = "url" height  = "200" width = "200" alt = "if image did not load show this">
+    2.Semantic tag - dont add functionality, just make code more readable - <nav>,<header>,<main>,<footer>,<section>,<aside>
+    3.Block tag start with new line eg - h1,div. Inline tag start with same line eg -<img src>
+    4.Internal link - 1. goto top <a href="#">Back top</a>  2.<section id = "comments"></section> <a href = "#comments"></a>
+    5. a^2 -> a <sup>2</sup>  a j(j niche me ) -> a<sub>j<sub>  <q>quoted text</q> <span>same like div but inline </span>
+    6. &lt; -> <  &gt; -> >  &apos; -> ;  &amp; -> &  &npsp - 1space &ensp - 2 space &emsp - 4space 
+-->
+
+
+</body>
+</html>
